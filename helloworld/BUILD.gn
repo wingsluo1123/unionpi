@@ -1,0 +1,13 @@
+import("//build/ohos.gni")
+
+ohos_executable("helloworld") {
+  sources = [       
+    "src/main.c"
+  ]
+  
+  include_dirs = [  
+    "include" 
+  ]
+  
+  part_name = "helloworld"    
+}

@@ -1,0 +1,31 @@
+import("//build/ohos.gni")
+import("//build/ohos/ndk/ndk.gni")
+
+ohos_executable("uart_chassis")
+{
+    sources = [
+        "src/uart_base.c",
+        "src/chassis_driver.c",
+        "src/main.c",
+    ]
+    include_dirs = [
+        "include",
+        "//commonlibrary/c_utils/base/include",
+    ]
+    external_deps = [
+        "c_utils:utils"
+    ]
+    remove_configs = [ "//build/config/compiler:no_rtti" ]
+    cflags=[
+        "-Werror"
+    ]
+    cflags_cc=[
+        "-frtti",
+    ]
+    ldflags = [
+        "-lpthread",
+        "-lm"
+    ]
+
+    part_name = "uart_chassis"
+}

@@ -1,0 +1,36 @@
+{
+    "name": "@ohos/my_samples",		   
+    "description": "Sensor services",		
+    "version": "4.0",			     
+    "license": "MIT",			      
+    "publishAs": "code-segment",		
+    "segment": {										
+        "destPath": "unionpi_whale_demo/ohos_car"			
+    },					               
+    "dirs": {},	  
+    "scripts": {},			            
+    "licensePath": "COPYING",			
+    "readmePath": {
+        "en": "README.rst"
+    },
+    "component": {			       
+        "name": "ohos_car",	
+        "subsystem": "unionpi_whale_demo",		
+        "syscap": [],		
+        "features": [],                
+        "adapted_system_type": [],		 
+        "rom": "",    
+        "ram": "",                                                   
+        "deps": {                      
+        "components": ["hilog_native"],
+        "third_party": [ ]
+      },         
+        "build": {				        
+            "sub_component": [
+                "//unionpi_whale_demo/ohos_car:ohos_car"
+            ],			                                 
+            "inner_kits": [],						               
+            "test": []							                         
+        }
+    }
+ }

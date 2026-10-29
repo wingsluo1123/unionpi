@@ -1,0 +1,31 @@
+import("//build/ohos.gni")
+import("//build/ohos/ndk/ndk.gni")
+
+ohos_executable("uart_lidar")
+{
+    sources = [
+        "src/main.c",
+        "src/lidar_data_processing.c",
+        "src/locker.c",
+        "src/mtime.c",
+        "src/uart_base.c",
+        "src/lidar_information.c",
+        "src/serial_port.c"
+    ]
+    include_dirs = [
+        "include",
+        "//commonlibrary/c_utils/base/include",
+    ]
+    external_deps = [
+        "c_utils:utils"
+    ]
+    remove_configs = [ "//build/config/compiler:no_rtti" ]
+    cflags=[
+        "-Werror"
+    ]
+    cflags_cc=[
+        "-frtti",
+    ]
+
+    part_name = "uart_lidar"
+}

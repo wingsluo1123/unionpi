@@ -1,0 +1,36 @@
+{
+    "name": "@ohos/whale_car",
+    "version": "4.0",
+    "license": "Apache License 2.0",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "unionpi_whale_demo/whale_car"
+    },
+    "dirs": {},
+    "scripts": {},
+    "component": {
+        "name": "whale_car",
+        "subsystem": "unionpi_whale_demo",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [
+            "standard"
+        ],
+        "rom": "648KB",
+        "ram": "256KB",
+        "deps": {
+            "components": [
+                "c_utils",
+                "hilog"
+            ],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [
+                "//unionpi_whale_demo/whale_car:whale_car"
+            ],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}

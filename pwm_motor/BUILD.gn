@@ -1,0 +1,19 @@
+import("//build/ohos.gni")
+import("//build/ohos/ndk/ndk.gni")
+
+ohos_executable("pwm_motor")
+{
+    sources = [
+        "src/main.c",
+        "src/pwm_base.c"
+    ]
+    include_dirs = [
+        "include",
+        "//commonlibrary/c_utils/base/include",
+    ]
+    external_deps = [
+        "c_utils:utils"
+    ]
+
+    part_name = "pwm_motor"
+}

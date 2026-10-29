@@ -1,0 +1,31 @@
+{
+    "name": "udp_client",
+    "description": "UDP client application for UnionPI Whale demo",
+    "version": "4.0",
+    "license": "Apache License 2.0",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "unionpi_whale_demo/udp_client"
+    },
+    "dirs": {},
+    "scripts": {},
+    "component": {
+        "name": "udp_client",
+        "subsystem": "unionpi_whale_demo",
+        "features": [],
+        "adapted_system_type": ["standard"],
+        "rom": "10KB",
+        "ram": "2KB",
+        "deps": {
+            "components": [],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [
+                "//unionpi_whale_demo/udp_client:udp_client"
+            ],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}

@@ -1,0 +1,25 @@
+import("//build/ohos.gni")
+import("//build/ohos/ndk/ndk.gni")
+
+ohos_executable("spi_ws2812")
+{
+    sources = [
+        "src/main.c",
+        "src/spi_base.c",
+        "src/ws2812_driver.c",
+    ]
+    include_dirs = [
+        "include",
+        "//commonlibrary/c_utils/base/include",
+    ]
+    external_deps = [
+        "c_utils:utils"
+    ]
+    cflags = [
+    "-Wno-error",
+    "-Wno-unused-variable",
+    "-Wno-unused-function",
+  ]
+
+    part_name = "spi_ws2812"
+}

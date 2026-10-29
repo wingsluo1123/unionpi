@@ -1,0 +1,36 @@
+{
+    "name": "@ohos/rs485_trans",
+    "version": "4.0",
+    "license": "Apache License 2.0",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "unionpi_whale_demo/rs485_trans"
+    },
+    "dirs": {},
+    "scripts": {},
+    "component": {
+        "name": "rs485_trans",
+        "subsystem": "unionpi_whale_demo",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [
+            "standard"
+        ],
+        "rom": "10KB",
+        "ram": "10KB",
+        "deps": {
+            "components": [
+                "c_utils",
+                "hilog"
+            ],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [
+                "//unionpi_whale_demo/rs485_trans:rs485_trans"
+            ],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}

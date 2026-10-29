@@ -1,0 +1,16 @@
+import("//build/ohos.gni")
+
+ohos_executable("udp_server") {
+    sources = [
+        "src/main.c",
+    ]
+
+    include_dirs = [
+        "include",
+    ]
+
+    external_deps = [
+    ]
+
+    part_name = "udp_server"
+}

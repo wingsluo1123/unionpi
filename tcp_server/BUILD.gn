@@ -1,0 +1,16 @@
+import("//build/ohos.gni")
+
+ohos_executable("tcp_server") {
+    sources = [
+        "src/main.c",
+    ]
+
+    include_dirs = [
+        "include",
+    ]
+
+    external_deps = [
+    ]
+
+    part_name = "tcp_server"
+}

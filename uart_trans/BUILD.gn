@@ -1,0 +1,26 @@
+import("//build/ohos.gni")
+import("//build/ohos/ndk/ndk.gni")
+
+ohos_executable("uart_trans")
+{
+    sources = [
+        "src/main.c",
+        "src/uart_base.c"
+    ]
+    include_dirs = [
+        "include",
+        "//commonlibrary/c_utils/base/include",
+    ]
+    external_deps = [
+        "c_utils:utils"
+    ]
+    remove_configs = [ "//build/config/compiler:no_rtti" ]
+    cflags=[
+        "-Werror"
+    ]
+    cflags_cc=[
+        "-frtti",
+    ]
+
+    part_name = "uart_trans"
+}

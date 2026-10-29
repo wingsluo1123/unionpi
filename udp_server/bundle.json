@@ -1,0 +1,31 @@
+{
+    "name": "udp_server",
+    "description": "UDP server application for UnionPI Whale demo",
+    "version": "4.0",
+    "license": "Apache License 2.0",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "unionpi_whale_demo/udp_server"
+    },
+    "dirs": {},
+    "scripts": {},
+    "component": {
+        "name": "udp_server",
+        "subsystem": "unionpi_whale_demo",
+        "features": [],
+        "adapted_system_type": ["standard"],
+        "rom": "10KB",
+        "ram": "2KB",
+        "deps": {
+            "components": [],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [
+                "//unionpi_whale_demo/udp_server:udp_server"
+            ],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}

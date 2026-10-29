@@ -1,0 +1,21 @@
+
+import("//build/ohos.gni")
+
+ohos_executable("rs485_trans") {
+    sources = [
+        "src/main.c",
+        "src/rs485_base.c",
+        "src/gpio_base.c",
+    ]
+
+    include_dirs = [
+        "include",
+        "//commonlibrary/c_utils/base/include",
+    ]
+
+    external_deps = [
+        "c_utils:utils",
+    ]
+
+    part_name = "rs485_trans"
+}

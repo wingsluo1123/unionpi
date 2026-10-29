@@ -1,0 +1,36 @@
+{
+    "name": "@ohos/i2c_oled",
+    "version": "4.0",
+    "license": "Apache License 2.0",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "unionpi_whale_demo/i2c_oled"
+    },
+    "dirs": {},
+    "scripts": {},
+    "component": {
+        "name": "i2c_oled",
+        "subsystem": "unionpi_whale_demo",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [
+            "standard"
+        ],
+        "rom": "10KB",
+        "ram": "10KB",
+        "deps": {
+            "components": [
+                "c_utils",
+                "hilog"
+            ],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [
+                "//unionpi_whale_demo/i2c_oled:i2c_oled"
+            ],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}
